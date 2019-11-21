@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">   
+</head>
+<body>
+ 
+<!-- 你的HTML代码 -->
+<script src="layui/layui.js"></script> 
+<script>
+layui.data('users', {
+    key:'tai',
+    value:'male'
+});
+
+layui.data('users', {
+    key:'kevin',
+    value:'male'
+});
+console.info("-----------------");
+console.info(layui.data('users'));
+console.info("show value:"+layui.data('users').tai);
+console.info("-----------------");
+
+console.info("-------remove kevin----------");
+layui.data('users', {
+    key:'kevin',
+    remove:true
+});
+console.info(layui.data('users'));
+console.info("-------remove all----------")
+
+layui.data('users', null);
+console.info(layui.data('users'));
+console.info("-----------------")
+
+</script> 
+</body>
+</html>
